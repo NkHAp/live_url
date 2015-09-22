@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<!--
+    Copyright (c) 2012-2014 Adobe Systems Incorporated. All rights reserved.
+
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="msapplication-tap-highlight" content="no" />
+        <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+        <!--meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" /-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, target-densitydpi=medium-dpi, user-scalable=0" />
+		<link rel="stylesheet" type="text/css" href="" />
+        <title>Take Care</title>
+    </head>
+    <body>
+    <div data-role="page" id="main" class="app_main">
+  <section>
+    <div id="page_1" >
+      <div data-role="header" class="header"> <img src="img/home_top.png" alt="Top Header" class="topbgmobile"> <img src="img/home_top_desktop.png" alt="Top Header" class="topbgdesktop"></div>
+      <!-- /header -->
+      <div data-role="content">
+        <div class="logo text-center"> <img src="img/tc_logo.png" alt="logo">
+          <p>APP</p>
+        </div>
+        <div class="p_r">
+          <div class="loading_circle"> </div>
+          <div class="loading_content"> <em>Loading Something Remarkable</em> </div>
+        </div>
+      </div>
+      <!-- /content -->
+    </div>
+    <!-- /page-1 -->
+<style>
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,600);
+.topbgmobile { display: none;}
+body{margin:0; padding:0; font-family:'Open Sans';}
+html,body{height:100%; background:#edd5a4;}
+#main .header {background-color: #edd5a4;}
+.app_main {
+    background: #edd5a4 url("img/bottomicon.png") no-repeat scroll right bottom;
+    color: #650a37;
+    font-size: 19px;
+	height:100%
+} 
+img{max-width:100%;}
+.text-center { text-align: center;}
+.logo p{margin-top:15px;}
+.loading_content{color:#717172; font-size:14px; width:100px; height:100px; position:absolute; text-align:center; left:0; right:0; top:36px; margin:auto; font-weight:normal; }
+/*Loading Amimation*/
+.loading_circle {
+    background-color: rgba(0,0,0,0);
+    border: 5px solid #995b72; 
+    border-top: 5px solid #fff;
+    border-left: 5px solid #fff;
+    border-radius: 50%; 
+    width: 120px;
+    height: 120px;
+    margin: 0 auto;
+    -moz-animation: spin 2s infinite linear;
+    -webkit-animation: spin 2s infinite linear;
+	margin-top:45px;
+} 
+.logo.text-center{margin-top:40px;} 
+#page_5 .logo.text-center{margin-top:25px;}#page_5 .loading_circle{margin-top:35px;} 
+.p_r{position:relative;}
+@media(max-width:320px){
+.logo.text-center{margin-top:5px;}
+.loading_circle{margin-top:10px;}
+}
+@media(min-width:480px) and (max-width:767px){.logo.text-center{margin-top:5px; } .loading_circle{margin-top:8px;}}
+@media (max-width:767px){ 
+.topbgdesktop {display: none;}
+.topbgmobile {display: block;}
+}
+@-moz-keyframes spin {
+    0% {
+        -moz-transform: rotate(0deg);
+    } 
+    100% {
+        -moz-transform: rotate(360deg);
+    };
+} 
+@-moz-keyframes spinoff {
+    0% {
+        -moz-transform: rotate(0deg);
+    } 
+    100% {
+        -moz-transform: rotate(-360deg);
+    };
+} 
+@-webkit-keyframes spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+    } 
+    100% {
+        -webkit-transform: rotate(360deg);
+    };
+} 
+@-webkit-keyframes spinoff {
+    0% {
+        -webkit-transform: rotate(0deg);
+    } 
+    100% {
+        -webkit-transform: rotate(-360deg);
+    };
+}
+</style>
+</section>
+</div>
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+        <script type="text/javascript">
+            
+			app.initialize();
+        </script>
+    </body>
+</html>
